@@ -1,0 +1,93 @@
+Travelling salesman problem with Simulated Annealing.
+
+This prject solves the travelling salesman problem with monte carlo simulated
+annealing method.
+
+The code asks for a letter from a-c, depending which scheme given in the 
+assingment one wants to run. The code is not the prettiest, simulated annealing
+routine is written for each shceme separately so the code is long. T_o is 
+chosen to be 10000, in 10000000 steps the T is lowered linearly to 0.1T_o, 
+and after this T_o is set as 0.8T_o and another 10000000 steps are simulated. 
+This is done 100 times. Arrays named 'indx' and 'distances' contain the 
+information of the sequence of points and their distances from each other.
+Some total distances of the routes are printed into data files for plotting,
+and some plots are included called caseA, caseB, caseC for cases 
+a, b, c respectively; plots are of total value of function to be minimized
+versus simulation steps.
+
+compilaion: make -f makesiman
+
+Running for a):
+
+$ ./SimulatedEx.exe 
+Seed from /dev/urandom: 282062966
+
+ Scheme a, b or c?
+a
+
+ Name of datafile that has the points?
+cities
+ How many points?
+20
+
+Similarly for b) and c), but with data file cities.
+
+Code prints out distance travelled and code running time. Also for case a),
+total time spent travelling is printed out and the order in which the cities 
+where visited (total time includes sales of vacuums). Result for case a) is:
+
+Mikkeli        
+
+ Jyvaskyla      
+
+ Kuopio         
+
+ Joensuu        
+
+ Kajaani        
+
+ Oulu           
+
+ Vaasa          
+
+ Pori           
+
+ Rauma          
+
+ Turku          
+
+ Tampere        
+
+ Hameenlinna    
+
+ Lahti          
+
+ Hyvinkaa       
+
+ Vantaa         
+
+ Espoo          
+
+ Helsinki       
+
+ Porvoo         
+
+ Kotka          
+
+ Lappeenranta   
+ Distance travelled:
+   1926.0643777172113     
+ Time taken:
+   5.9595970087168340     
+
+After multiple runs, the distance travelled, time taken and order of cities 
+remained the same. The order might be reversed though and the starting city
+may be different at different runs, but these do not affect the distance and 
+time. Distance is in kilometers and time in hours.
+
+
+
+    
+
+
+

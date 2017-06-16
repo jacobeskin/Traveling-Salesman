@@ -1,0 +1,13 @@
+# -*-makefile-*-
+
+SimulatedEx.exe: mtfort90.o SimulatedEx.o
+	gfortran -Wall -g -o SimulatedEx.exe mtfort90.o SimulatedEx.o
+
+mtfort90.o: mtfort90.f90
+	gfortran -g -c mtfort90.f90
+
+SimulatedEx.o: SimulatedEx.f90
+	gfortran -g -c SimulatedEx.f90
+
+clean:
+	rm -f *.o
