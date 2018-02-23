@@ -1,9 +1,12 @@
 Travelling salesman problem with Simulated Annealing.
 
 This prject solves the travelling salesman problem with monte carlo simulated
-annealing method.
+annealing method. It is written in Python and in Fortran. The Python version is 
+in a Jupyter notebook. The Python version deals with the distances of 10 of the
+largest cities in the US, the Fortran version with Finnish cities. The core code
+is pretty much the same.
 
-The code asks for a letter from a-c, depending which scheme given in the 
+The Fortran code asks for a letter from a-c, depending which scheme given in the 
 assingment one wants to run. The code is not the prettiest, simulated annealing
 routine is written for each shceme separately so the code is long. T_o is 
 chosen to be 10000, in 10000000 steps the T is lowered linearly to 0.1T_o, 
